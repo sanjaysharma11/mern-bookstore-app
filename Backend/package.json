@@ -3,21 +3,20 @@
     "version": "1.0.0",
     "description": "mern project",
     "main": "index.js",
+  "engines": { 
+    "node": "18.x"
+  },
     "type": "module",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "nodemon index.js"
-    },
+        "start": "node index.js"
+      },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/akhil2k-lc/bookStoreApp.git"
+        "url": "git+https://github.com/sanjaysharma11/bookstore.git"
     },
-    "author": "Akhil",
+    "author": "Sanjay Sharma",
     "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/akhil2k-lc/bookStoreApp/issues"
-    },
-    "homepage": "https://github.com/akhil2k-lc/bookStoreApp#readme",
     "dependencies": {
         "bcryptjs": "^2.4.3",
         "cors": "^2.8.5",
