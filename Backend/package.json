@@ -1,7 +1,7 @@
 {
   "name": "bookstore",
   "version": "1.0.0",
-  "description": "mern project",
+  "description": "MERN project",
   "main": "index.js",
   "engines": {
     "node": "18.x"
@@ -10,11 +10,11 @@
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js",
-    "build": "npm install && npm install --prefix Frontend"
+    "build": "cd Frontend && yarn install && yarn build"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sanjaysharma11/bookstore.git"
+    "url": "git+https://github.com/sanjaysharma11/bookstore.git"
   },
   "author": "Sanjay Sharma",
   "license": "ISC",
@@ -23,9 +23,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.18.3",
-    "mongoose": "^8.2.2"
-  },
-  "devDependencies": {
+    "mongoose": "^8.2.2",
     "nodemon": "^3.1.0"
   }
 }
