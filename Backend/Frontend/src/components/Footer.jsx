@@ -49,7 +49,7 @@ function Footer() {
           </div>
         </nav>
         <aside>
-          <p>Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
+          <p>© 2024 Sanjay | All Rights Reserved</p>
         </aside>
       </footer>
     </div>
