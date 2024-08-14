@@ -6,17 +6,19 @@ import path from "path";
 import bookRoute from "./route/book.route.js";
 import userRoute from "./route/user.route.js";
 
+// Initialize express app
 const app = express();
 
+// Middleware
 app.use(cors());
 app.use(express.json());
-
 dotenv.config();
 
+// Define port and MongoDB URI
 const PORT = process.env.PORT || 4000;
 const URI = process.env.MongoDBURI;
 
-// connect to mongoDB
+// Connect to MongoDB
 try {
     mongoose.connect(URI, {
         useNewUrlParser: true,
@@ -27,20 +29,21 @@ try {
     console.log("Error: ", error);
 }
 
-// defining routes
+// Define routes
 app.use("/book", bookRoute);
 app.use("/user", userRoute);
 
-// deployment
-
-if(process.env.NODE_ENV === 'production'){
+// Serve static files and handle frontend routes in production
+if (process.env.NODE_ENV === 'production') {
     const dirPath = path.resolve();
-    app.use(express.static("./Frontend/dist"))
-    app.get("*", (req,res) =>{
-        res.sendFile(path.resolve(dirPath,"./Frontend", "dist", "index.html"));
-    })
+    app.use(express.static(path.join(dirPath, "Frontend", "dist")));
+
+    app.get("*", (req, res) => {
+        res.sendFile(path.join(dirPath, "Frontend", "dist", "index.html"));
+    });
 }
 
+// Start server
 app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`);
 });
