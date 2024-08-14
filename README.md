@@ -1,8 +1,22 @@
-# React + Vite
+# Full-Stack Web Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a full-stack web application built using **MongoDB**, **Express.js**, **React.js**, and **Node.js**. The project features a dynamic and responsive web interface with a backend server and a NoSQL database.
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **MongoDB**: A NoSQL database for storing application data.
+- **Express.js**: A web application framework for Node.js to build the backend.
+- **React.js**: A JavaScript library for building user interfaces (frontend).
+- **Node.js**: JavaScript runtime for executing server-side code.
+
+### UI Design
+
+- **Tailwind CSS**: A utility-first CSS framework for creating custom designs.
+
+## Features
+
+- **Dynamic Content**: Fetch and display data dynamically from the backend.
+- **Responsive Design**: Optimized for different devices and screen sizes.
+- **User Authentication**: Secure user login and registration.
+- **CRUD Operations**: Create, read, update, and delete operations for managing data.
+
